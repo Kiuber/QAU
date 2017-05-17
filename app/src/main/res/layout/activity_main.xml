@@ -1,19 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="me.kiuber.school.qau.MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:id="@+id/rg_tabs"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:background="@android:color/white"
+        android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+        <RadioButton
+            android:id="@+id/rb_dynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_dynamic"
+            android:gravity="center"
+            android:padding="@dimen/little_space"
+            android:text="互动"
+            android:textColor="@drawable/tab_text_color_selector"/>
+
+        <RadioButton
+            android:id="@+id/rb_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_data"
+            android:gravity="center"
+            android:padding="@dimen/little_space"
+            android:text="资料"
+            android:textColor="@drawable/tab_text_color_selector"/>
+
+        <RadioButton
+            android:id="@+id/rb_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_friend"
+            android:gravity="center"
+            android:padding="@dimen/little_space"
+            android:text="交友"
+            android:textColor="@drawable/tab_text_color_selector"/>
+
+        <RadioButton
+            android:id="@+id/rb_my"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_my"
+            android:gravity="center"
+            android:padding="@dimen/little_space"
+            android:text="我的"
+            android:textColor="@drawable/tab_text_color_selector"/>
+    </RadioGroup>
+
+</LinearLayout>
